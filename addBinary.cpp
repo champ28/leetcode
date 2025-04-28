@@ -1,3 +1,12 @@
+/* the while loops makes length of a and  b string equal.
+    the individual bits of strings a and b are added with position wise.
+    the bit addition is as follows 1+1 = 10, 0+0= 00, 1+0 = 01, 0+1 = 01. 
+
+    we start addition from right to left.
+    if there is any carry from previous bits addition we store it in character c. This character is added to the new bits addition.
+    
+*/
+
 class Solution {
 public:
     string addBinary(string a, string b) {
@@ -12,8 +21,6 @@ public:
             b.insert(b.begin(),'0');
             lb++;
         }
-        cout<<a<<endl;
-        cout<<b<<endl;
         la= a.length()-1,lb= b.length()-1;
         char c='0';
         while(la>=0){
@@ -57,3 +64,7 @@ public:
         return res;
     }
 };
+
+
+
+
